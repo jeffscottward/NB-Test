@@ -1,0 +1,18 @@
+
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <rect x="0" y="0" width="24" height="24" id="rect-1"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Custom-fields" transform="translate(-43.000000, -112.000000)">
+            <g id="Primary-nav">
+                <g id="Icons" transform="translate(42.000000, 111.000000)">
+                    <g id="icons8-combo-chart-64">
+                        <image x="0" y="0" width="24" height="24" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGOfPtRkwAAAqRJREFUeAHtl8+LT1EYxoeGlNhYSJSaSbGxs7NSFkgxFmMshrLAQlZSk41YKCuxQTaWdhqFbG3EXyCzmvxKbFDM+PV5yq3b27lz7/X9Xs65533r6fs97z3vue/zvO+5596RETdXwBVwBfqlwCR0ZvpFqTmbo0z9AX6BK83D+jHzMDQWgcgXuNAPavUsjjGlqHxB/iu+PfWh6c84AYWfoCCuX5HfC3pvJ2Ho5BGhqH4yld9G0qMD9OcRYr+XiEsAPQB1BEZvx8lQbfsFzIJpsBo0taq239d0gf857xA3t5VT9ZqKcYq5ds8v4DsIorfdZPgNFPu16rdKjCryE9EzJ8Ht4GMD8laUD8TcBueB7RyNp0D0NkaGr4EldwnfTfA+cM3OteNkyG+G3HyA4Gl8hS3nz05wFbwClqwda88n0fbrSfRFgNBlfFVWJ0Yy5NfA8Bmw1buFb1kVe+Mvi6Et9E/JX+eG+pLS/m1rKwl4ACz5+/hWtF3sz3zFbf3L2NZhG4gof1Y+Z3wGrGuwkt7u7gFL/hE+CZOEnSVLS0BjvWffBftB6DVWrX0H2FhtBW2JZOwpmVoSdqyH2wzYVGJ1MRA3h08dlZSpWnpffwIscTvWefwQXAvMfYNvHCRtG8n+HHgJLPmlxu+YvwX0xooj6QaMPoOlyH/i+o7eMA8QWYtPn7CPgf0y04NyF8jGdDbrze4t0PPgAMjSVsG6122fZVWzIN30w2SYYugEKduwc2i1vo63rM0FyLr8kA991Q2qSas9GLjZoPGBJatdvgWqtcnjSvYdEHoG1O3Buutdt85Q7599B7gAXfdr7Ot7B8Reoa7z8w7oWuHY1/cOiL1CXefnHdC1wrGv7x0Qe4W6zs87oGuFfX1XwBVwBVwBV8AVcAViVeA3137/qYlaMbEAAAAASUVORK5CYII="></image>
+                        <use fill="#C2C2C2" fill-rule="evenodd" xlink:href="#rect-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
