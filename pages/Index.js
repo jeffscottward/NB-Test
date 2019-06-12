@@ -2,11 +2,16 @@ import React from "react";
 
 import Sidebar from '../components/SideBar'
 import Topbar from "../components/Topbar";
-import TabArea from "../components/TabArea";
+import Navigation from "../components/Navigation";
 import CustomFields from "../components/CustomFields";
+import { Container, Row, Col } from "reactstrap";
 
 import { StateProvider } from "../state/state";
 import reducer from "../state/reducer";
+
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+import GlobalValues from '../constants/globalValues'
 
 const Index = () => {
   const initialState = {
@@ -18,13 +23,22 @@ const Index = () => {
     <div id="Index">
       <StateProvider initialState={initialState} reducer={reducer}>
         <Topbar />
+        <br />
         <main>
-          <Sidebar />
-          <TabArea />
-          <CustomFields />
+          {/* <Sidebar /> */}
+          <Container className="contentContainer">
+            <Navigation
+              tabs
+              elList={GlobalValues.siteMap.pages.Settings.Defaults}
+            />
+            <CustomFields />
+          </Container>
         </main>
       </StateProvider>
       <style jsx global>{`
+        .contentContainer {
+          margin-left: 15px;
+        }
         * {
           box-sizing: border-box;
           font-family: "Aktiv Grotesk";
@@ -35,25 +49,17 @@ const Index = () => {
           margin: 0;
           padding: 0;
           height: 100%;
+          background: ${GlobalValues.pageBgColor};
         }
-        ul {
-          display: flex;
+        #Index {
+          max-width: 1200px;
+          margin: auto;
         }
-        ul,
-        li {
-          margin: 0;
-          padding: 0;
-          list-style: none;
-        }
-        #__next {
-          display: flex;
-          flex-direction: column;
-        }
-        button {
+        a {
           cursor: pointer;
         }
-
-        @font-face {
+         {
+          /* @font-face {
           font-family: "Aktiv Grotesk";
           src: url("AktivGrotesk-Regular.ttf") format("truetype");
           font-weight: normal;
@@ -191,6 +197,7 @@ const Index = () => {
           src: url("AktivGrotesk-HairItalic.ttf") format("truetype");
           font-weight: 300;
           font-style: italic;
+        } */
         }
       `}</style>
     </div>

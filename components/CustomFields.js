@@ -7,8 +7,20 @@ const CustomFields = () => (
       <label>People</label>
       <label>Donations</label>
     </Subnav>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <style jsx>{`
       #CustomFields {
+        background: white;
       }
     `}</style>
   </div>

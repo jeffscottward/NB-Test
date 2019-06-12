@@ -1,35 +1,55 @@
 import React from "react";
+import Navigation from "../components/Navigation";
+import GlobalValues from "../constants/globalValues";
+import {Container, Row, Col, Input } from "reactstrap";
 
 const TopBar = () => (
   <header id="Topbar">
-    <div className="banner-row">
-      <h1>Settings</h1>
-      <input type="text" placeholder="Search People" />
-      <img className="user-avatar" />
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#"><label>Your account</label></a></li>
-        <li><a href="#"><label>Contact</label></a></li>
-        <li className="active"><a href="#"><label>Defaults</label></a></li>
-        <li><a href="#"><label>Political</label></a></li>
-        <li><a href="#"><label>Domains</label></a></li>
-        <li><a href="#"><label>Payment Processors</label></a></li>
-        <li><a href="#"><label>Apps</label></a></li>
-        <li><a href="#"><label>Developer</label></a></li>
-        <li><a href="#"><label>Database</label></a></li>
-        <li><a href="#"><label>Privacy</label></a></li>
-      </ul>
-    </nav>
-    <style jsx>{`
-      #Topbar {
+    <Container>
+      <Row>
+        <Col>
+          <br />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <h1>Settings</h1>
+        </Col>
+        <Col />
+        <Col className="nav-right">
+          <Input
+            type="text"
+            name="search-people"
+            id="search-people"
+            className="search-people text-muted"
+            placeholder="Search People"
+          />
+          <img className="user-avatar" src="https://placekitten.com/35/35" />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <br />
+        </Col>
+      </Row>
+      <Row>
+        <Navigation follow elList={GlobalValues.siteMap.pages.Settings} />
+      </Row>
+    </Container>
+    <style>{`
+      #Topbar {background: white; }
+      .nav-right * {
+        display: inline-block;
       }
-      .banner-row {}
-      ul {}
-      li {}
-      a {}
-      i {}
+      .search-people {
+        width: 80%;
+        background: ${GlobalValues.formInputBgColor};
+      }
+      .user-avatar {
+        margin-left: 20px;
+        border-radius: 50%;
+      }
     `}</style>
   </header>
-)
+);
 export default TopBar;
