@@ -1,7 +1,11 @@
 import React from "react";
-import Navigation from "../components/Navigation";
 import GlobalValues from "../constants/globalValues";
 import {Container, Row, Col, Input } from "reactstrap";
+import dynamic from "next/dynamic";
+
+const NavNoSSR = dynamic(() => import("../components/Navigation"), {
+  ssr: false
+});
 
 const TopBar = () => (
   <header id="Topbar">
@@ -33,7 +37,12 @@ const TopBar = () => (
         </Col>
       </Row>
       <Row>
-        <Navigation follow elList={GlobalValues.siteMap.pages.Settings} />
+        <NavNoSSR
+          follow
+          defaultEl={"Defaults"}
+          mainNav
+          elList={GlobalValues.siteMap.pages.Settings}
+        />
       </Row>
     </Container>
     <style>{`
@@ -43,7 +52,7 @@ const TopBar = () => (
       }
       .search-people {
         width: 80%;
-        background: ${GlobalValues.formInputBgColor};
+        background: ${GlobalValues.css.formInputBgColor};
       }
       .user-avatar {
         margin-left: 20px;

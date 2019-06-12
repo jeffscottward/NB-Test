@@ -1,12 +1,9 @@
 import React from "react";
 import Subnav from "./Subnav"
 
-const CustomFields = () => (
-  <div id="CustomFields">
-    <Subnav>
-      <label>People</label>
-      <label>Donations</label>
-    </Subnav>
+const TabContent = () => (
+  <div id="TabContent">
+    <Subnav />
     <br />
     <br />
     <br />
@@ -19,11 +16,13 @@ const CustomFields = () => (
     <br />
     <br />
     <style jsx>{`
-      #CustomFields {
+      #TabContent {
         background: white;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 2px;
       }
     `}</style>
   </div>
 );
 
-export default CustomFields;
+export default TabContent;

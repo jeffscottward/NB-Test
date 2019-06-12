@@ -1,28 +1,27 @@
 import React, { useState } from "react";
-import {Nav} from "reactstrap";
 import NavElList from './NavElList'
 
-const ContentNav = (props) => {
-  const [activeEl, setActiveEl] = useState(1)
-  const toggleEl = (el) => {if (activeEl !== el) {setActiveEl(el)}}
+const Navigation = (props) => {
+  const [activeEl, setActiveEl] = useState(props.defaultEl);
+  const toggleActiveEl = (el) => {if (activeEl !== el) {setActiveEl(el)}}
   return (
-    <div id="ContentNav">
+    <div className="NavigationEl">
       <NavElList
         follow={props.follow}
         followBar={props.followBar}
+        sideBar={props.sideBar}
+        sideBarOpen={props.sideBarOpen}
+        subNav={props.subNav}
+        mainNav={props.mainNav}
+        follow={props.follow}
         tabs={props.tabs}
-        pills={props.pills}
-        tabs={props.tabs}
-        card={props.card}
-        justified={props.justified}
-        fill={props.fill}
         vertical={props.vertical}
         elList={props.elList}
         activeEl={activeEl}
-        toggleEl={toggleEl}
+        toggleActiveEl={toggleActiveEl}
       />
     </div>
   );
 };
 
-export default ContentNav
+export default Navigation
