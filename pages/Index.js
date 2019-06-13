@@ -42,7 +42,10 @@ const Index = () => {
                         defaultEl={"Custom Fields"}
                         elList={GlobalValues.siteMap.pages.Settings.Defaults}
                       />
-                      <TabContent />
+                      <TabContent
+                        defaultSubNavEl={"People"}
+                        elList={GlobalValues.siteMap.pages.Settings.Defaults['Custom Fields']}
+                      />
                     </Col>
                   </Row>
                 </main>

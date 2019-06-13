@@ -12,7 +12,7 @@ export default {
     pageBgColor: "#EAEBED",
     gridRowHoverColor: "#FAFDFE",
     divider: "2px solid #eff3f4",
-    sideBarFontColor: '#C2C2C2'
+    sideBarFontColor: "#C2C2C2"
   },
   siteMap: {
     pages: {
@@ -33,35 +33,47 @@ export default {
               subTitle:
                 "You are sharing custom field settings. All custom fields you create will automatically become avaialble to your networked nations.",
               formFields: {
-                Name: {
-                  required: true,
-                  note: ""
-                },
-                Slug: {
-                  required: true,
-                  note:
-                    "Choose carefully, for data integrity reasons, this cannot be changed later"
-                },
-                "Field Type": {
-                  required: true,
-                  options: ["Option1", "Option2", "Option3", "Option4"]
-                }
+                textInputs: [
+                  {
+                    label: "Name",
+                    required: true,
+                    placeHolder: "",
+                    note: ""
+                  },
+                  {
+                    label: "Slug",
+                    required: true,
+                    placeHolder: "",
+                    note:
+                      "Choose carefully, for data integrity reasons, this cannot be changed later"
+                  }
+                ],
+                dropDowns: [
+                  {
+                    label: "Field Type",
+                    required: true,
+                    options: ["Text", "Checkbox"]
+                  }
+                ]
               },
               table: [
                 {
                   name: "Nation slug",
                   slug: "nationslug",
-                  type: "Text"
+                  type: "Text",
+                  '': '▾'
                 },
                 {
                   name: "DNS providor",
                   slug: "dns_providor",
-                  type: "Text"
+                  type: "Text",
+                  '': '▾'
                 },
                 {
                   name: "Web designer",
                   slug: "web_designer",
-                  type: "Checkbox"
+                  type: "Checkbox",
+                  '': '▾'
                 }
               ]
             },

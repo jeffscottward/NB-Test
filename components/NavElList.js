@@ -23,7 +23,8 @@ export default (props) => {
         <NavItem key={index}>
           <NavLink
             className={classnames({
-              "text-muted": props.tabs !== undefined,
+              "text-muted":
+                props.tabs !== undefined || props.subNav !== undefined,
               "text-info": props.activeEl === item,
               ["follow " + genClass]: props.activeEl === item,
               active: props.activeEl === item
@@ -69,8 +70,13 @@ export default (props) => {
                   GlobalValues.css.activeColor};`
           }
         }
-        .followBar.${genClass} {
-
+        @media only screen and (max-width: 1100px) {
+          .side-nav-wrap {
+            font-size: 15px;
+          }
+          .nav-link {
+            padding: .5rem .3rem;
+          }
         }
       `}</style>
     </Nav>

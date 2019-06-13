@@ -19,7 +19,6 @@ const TopBar = () => (
         <Col>
           <h1>Settings</h1>
         </Col>
-        <Col />
         <Col className="nav-right">
           <Input
             type="text"
@@ -47,16 +46,19 @@ const TopBar = () => (
     </Container>
     <style>{`
       #Topbar {background: white; }
-      .nav-right * {
-        display: inline-block;
+      .nav-right {
+        display: flex;
+        justify-content: flex-end;
       }
       .search-people {
-        width: 80%;
+        width: 70%;
         background: ${GlobalValues.css.formInputBgColor};
       }
       .user-avatar {
         margin-left: 20px;
         border-radius: 50%;
+        width: 35px;
+        height: 35px;
       }
     `}</style>
   </header>

@@ -10,9 +10,9 @@ const SubNav = (props, children) => (
   <div id="SubNav">
     <NavNoSSR
       follow
-      defaultEl={"People"}
+      defaultEl={props.defaultEl}
       subNav
-      elList={GlobalValues.siteMap.pages.Settings.Defaults["Custom Fields"]}
+      elList={props.elList}
     />
     <style jsx>{`
       #SubNav {
