@@ -9,6 +9,8 @@ import { useStateValue } from "../state/state";
 import SidebarIcons from "../images/SidebarIcons";
 
 export default (props) => {
+  // Gen class is only needed because of un-scopable component
+  // due to global css requirement from Bootstrap >:-(
   const [genClass,] = useState('genClass' + Math.floor(Math.random() * 100))
   const [{ data }, dispatch] = useStateValue();
   return (
