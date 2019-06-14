@@ -3,12 +3,12 @@ export default {
     formElementSize: "40px",
     activeColor: "#1498BE",
     formInputBgColor: "#F7F8F8",
-    formInputBorderColor: "#979797",
+    formInputBorderColor: "#dee2e6",
     formButtonBgColor: "#28B4D3",
     formDropDownBorderColor: "#E7E7E7",
     formArrowDefaultColor: "#E7E7E7",
     tabElementInactiveFontColor: "#666666",
-    defaultShadow: "0px 1px 3px 0px #000",
+    defaultShadow: "0px 1px 3px 0px rgba(0,0,0,.1)",
     pageBgColor: "#EAEBED",
     gridRowHoverColor: "#FAFDFE",
     divider: "2px solid #eff3f4",
@@ -58,22 +58,22 @@ export default {
               },
               table: [
                 {
-                  name: "Nation slug",
-                  slug: "nationslug",
-                  type: "Text",
-                  '': '▾'
+                  Name: "Nation slug",
+                  Slug: "nationslug",
+                  Type: "Text",
+                  "": "▾"
                 },
                 {
-                  name: "DNS providor",
-                  slug: "dns_providor",
-                  type: "Text",
-                  '': '▾'
+                  Name: "DNS providor",
+                  Slug: "dns_providor",
+                  Type: "Text",
+                  "": "▾"
                 },
                 {
-                  name: "Web designer",
-                  slug: "web_designer",
-                  type: "Checkbox",
-                  '': '▾'
+                  Name: "Web designer",
+                  Slug: "web_designer",
+                  Type: "Checkbox",
+                  "": "▾"
                 }
               ]
             },

@@ -5,11 +5,12 @@ import {
   NavLink,
 } from "reactstrap";
 import classnames from "classnames";
-import GlobalValues from "../constants/globalValues";
+import { useStateValue } from "../state/state";
 import SidebarIcons from "../images/SidebarIcons";
 
 export default (props) => {
   const [genClass,] = useState('genClass' + Math.floor(Math.random() * 100))
+  const [{ data }, dispatch] = useStateValue();
   return (
     <Nav
       className={classnames({
@@ -45,7 +46,7 @@ export default (props) => {
       ))}
       <style>{`
         .active {
-          color: ${GlobalValues.css.activeColor} !important;
+          color: ${data.css.activeColor} !important;
         }
         .sideBar a {
           padding-left: 40px;
@@ -65,9 +66,9 @@ export default (props) => {
         .follow.${genClass} {
           ${
             props.vertical
-              ? `border-left: ${"3px solid " + GlobalValues.css.activeColor};`
+              ? `border-left: ${"3px solid " + data.css.activeColor};`
               : `border-bottom: ${"3px solid " +
-                  GlobalValues.css.activeColor};`
+                  data.css.activeColor};`
           }
         }
         @media only screen and (max-width: 1100px) {

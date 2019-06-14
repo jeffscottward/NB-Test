@@ -1,26 +1,25 @@
 import React from "react";
-import dynamic from "next/dynamic";
-import GlobalValues from "../constants/globalValues";
+import { useStateValue } from "../state/state";
+import Navigation from "./Navigation";
 
-const NavNoSSR = dynamic(() => import("../components/Navigation"), {
-  ssr: false
-});
-
-const SubNav = (props, children) => (
-  <div id="SubNav">
-    <NavNoSSR
-      follow
-      defaultEl={props.defaultEl}
-      subNav
-      elList={props.elList}
-    />
-    <style jsx>{`
-      #SubNav {
-        padding-top: 10px;
-        border-bottom: ${GlobalValues.css.divider};
-      }
-    `}</style>
-  </div>
-);
+const SubNav = (props, children) => {
+  const [{ data }, dispatch] = useStateValue();
+  return (
+    <div id="SubNav">
+      <Navigation
+        follow
+        defaultEl={props.defaultEl}
+        subNav
+        elList={props.elList}
+      />
+      <style jsx>{`
+        #SubNav {
+          padding-top: 10px;
+          border-bottom: ${data.css.divider};
+        }
+      `}</style>
+    </div>
+  );
+}
 
 export default SubNav
