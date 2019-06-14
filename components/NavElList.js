@@ -67,11 +67,11 @@ export default (props) => {
           ${
             props.vertical
               ? `border-left: ${"3px solid " + data.css.activeColor};`
-              : `border-bottom: ${"3px solid " +
-                  data.css.activeColor};`
+              : `border-bottom: ${"3px solid " + data.css.activeColor};`
           }
         }
         @media only screen and (max-width: 1100px) {
+          .sub-main-nav-wrap,
           .side-nav-wrap {
             font-size: 15px;
           }

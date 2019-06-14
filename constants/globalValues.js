@@ -12,7 +12,8 @@ export default {
     pageBgColor: "#EAEBED",
     gridRowHoverColor: "#FAFDFE",
     divider: "2px solid #eff3f4",
-    sideBarFontColor: "#C2C2C2"
+    sideBarFontColor: "#C2C2C2",
+    tableRowAltColor: "#FBFDFE"
   },
   siteMap: {
     pages: {
