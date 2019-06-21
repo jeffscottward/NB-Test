@@ -12,10 +12,19 @@ const SubNav = (props, children) => {
         subNav
         elList={props.elList}
       />
+      <div className="followBar-shadow" />
       <style jsx>{`
         #SubNav {
-          padding-top: 10px;
+          overflow: hidden;
+          position: relative;
+          padding: 10px 10px 0 10px;
+        }
+        .followBar-shadow {
           border-bottom: ${data.css.divider};
+          position: relative;
+          top: -3px;
+          left: -5%;
+          width: 110%;
         }
       `}</style>
     </div>

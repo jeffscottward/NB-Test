@@ -20,6 +20,14 @@ const Navigation = (props) => {
         activeEl={activeEl}
         toggleActiveEl={toggleActiveEl}
       />
+      <style>
+        {`
+        .NavigationEl {
+          position: relative;
+          z-index: 1;
+        }
+      `}
+      </style>
     </div>
   );
 };
