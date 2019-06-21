@@ -75,10 +75,10 @@ export default (props) => {
         @media only screen and (max-width: 1100px) {
           .sub-main-nav-wrap,
           .side-nav-wrap {
-            font-size: 15px;
+            font-size: 13px;
           }
           .nav-link {
-            padding: .5rem .3rem;
+            padding: .5rem .4em;
           }
         }
       `}</style>

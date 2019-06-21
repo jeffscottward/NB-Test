@@ -71,17 +71,35 @@ const CustomFieldsContent = props => {
                           setFormData(newFormData);
                         }}
                       />
-                      {item.note && (
+                      {/* {item.note && (
                         <p className="input-note text-muted">
                           Choose carefully, for data integrity reasons, this
                           cannot be changed later
                         </p>
-                      )}
+                      )} */}
                     </FormGroup>
                   );
                 })}
               </Col>
-              <Col></Col>
+              <Col>
+                <FormGroup style={{ opacity: 0 }}>
+                  <Label> Hi</Label>
+                  <Input type="text" />
+                </FormGroup>
+                <FormGroup style={{ opacity: 0 }}>
+                  <Label> Hi</Label>
+                </FormGroup>
+                {textInputsfromData.map((item, idx) => {
+                  return (
+                    item.note && (
+                      <p className="input-note text-muted">
+                        Choose carefully, for data integrity reasons, this
+                        cannot be changed later
+                      </p>
+                    )
+                  );
+                })}
+              </Col>
             </Row>
             <Row>
               <Col>
@@ -139,7 +157,9 @@ const CustomFieldsContent = props => {
                             <div
                               className="edit-trigger text-info"
                               onClick={e => {
-                                setFormData(tabContentSubNavA.table[YRowindex]);
+                                setFormData(
+                                  tabContentSubNavA.table[YRowindex]
+                                );
                               }}
                             >
                               Edit
@@ -253,6 +273,31 @@ const CustomFieldsContent = props => {
         }
         .edit-trigger:hover {
           opacity: 1;
+        }
+        .dropdown-toggle.btn.btn-secondary {
+          background: white ;
+          padding: 10px 15px;
+          width: 175px;
+          border: 1px solid #dee2e6;
+          color: #6c757d !important;
+          text-align: left;
+          position: relative;
+        }
+        .dropdown-toggle.btn.btn-secondary::after {
+          position: absolute;
+          right: 10px;
+          top: 45%;
+          background-image: url('data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjEycHgiIGhlaWdodD0iOHB4IiB2aWV3Qm94PSIwIDAgMTIgOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDxkZWZzPgogICAgICAgIDxwYXRoIGQ9Ik0xMS4yNTUyNjY3LDIuMDcxMzc1IEMxMS4yNTUyNjY3LDIuMzA3ODc1IDExLjE3MjAyOTYsMi41MDg3NSAxMS4wMDU1NTU2LDIuNjc0IEw2LjYxMzg4ODg5LDcuMDMzMzc1IEM2LjQ0Mjg4MTQ4LDcuMjAzMTI1IDYuMjM4MjUxODUsNy4yODggNiw3LjI4OCBDNS43NTcyMTQ4MSw3LjI4OCA1LjU1NDg1MTg1LDcuMjAzMTI1IDUuMzkyOTExMTEsNy4wMzMzNzUgTDEuMDAxMjQ0NDQsMi42NzQgQzAuODMwMjM3MDM3LDIuNTEzMjUgMC43NDQ3MzMzMzMsMi4zMTIzNzUgMC43NDQ3MzMzMzMsMi4wNzEzNzUgQzAuNzQ0NzMzMzMzLDEuODM0ODc1IDAuODMwMjM3MDM3LDEuNjMxNzUgMS4wMDEyNDQ0NCwxLjQ2MiBMMS41MDAyODg4OSwwLjk1OTg3NSBDMS42NzU1Nzc3OCwwLjc5NDYyNSAxLjg4MDIwNzQxLDAuNzEyIDIuMTE0MTc3NzgsMC43MTIgQzIuMzUyNDI5NjMsMC43MTIgMi41NTQ3OTI1OSwwLjc5NDYyNSAyLjcyMTI2NjY3LDAuOTU5ODc1IEw2LDQuMjE0NSBMOS4yNzg3MzMzMywwLjk1OTg3NSBDOS40NDUyMDc0MSwwLjc5NDYyNSA5LjY0NzU3MDM3LDAuNzEyIDkuODg1ODIyMjIsMC43MTIgQzEwLjExOTc5MjYsMC43MTIgMTAuMzI0NDIyMiwwLjc5NDYyNSAxMC40OTk3MTExLDAuOTU5ODc1IEwxMS4wMDU1NTU2LDEuNDYyIEMxMS4xNzIwMjk2LDEuNjM2IDExLjI1NTI2NjcsMS44MzkxMjUgMTEuMjU1MjY2NywyLjA3MTM3NSBaIiBpZD0icGF0aC0xIj48L3BhdGg+CiAgICA8L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iQ3VzdG9tLWZpZWxkcyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTExNDQuMDAwMDAwLCAtODIyLjAwMDAwMCkiPgogICAgICAgICAgICA8ZyBpZD0iaWNvbi9jaGV2cm9uLWRvd24tY29weS0zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMTQ0LjAwMDAwMCwgODIyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPG1hc2sgaWQ9Im1hc2stMiIgZmlsbD0id2hpdGUiPgogICAgICAgICAgICAgICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI3BhdGgtMSI+PC91c2U+CiAgICAgICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgICAgICA8dXNlIGlkPSJjaGV2cm9uLWRvd24iIGZpbGw9IiMwMDAwMDAiIGZpbGwtcnVsZT0ibm9uemVybyIgeGxpbms6aHJlZj0iI3BhdGgtMSI+PC91c2U+CiAgICAgICAgICAgICAgICA8ZyBpZD0i8J+OqC1jb2xvciIgbWFzaz0idXJsKCNtYXNrLTIpIiBmaWxsPSIjQjhCOEI4Ij4KICAgICAgICAgICAgICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMi4wMDAwMDAsIC00LjAwMDAwMCkiIGlkPSJSZWN0YW5nbGUtQ29weS0yIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48L3JlY3Q+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=');
+          width: 12px;
+          height: 8px;
+          border: none !important;
+        }
+        .btn-secondary.dropdown-toggle:focus {
+          box-shadow: none !important;
+        }
+        #TabContent input[type="text"] {
+          background: ${data.css.formInputBgColor};
+          padding: 1.6rem .75rem !important;
         }
       `}</style>
     </div>

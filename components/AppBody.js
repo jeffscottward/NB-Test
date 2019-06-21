@@ -12,7 +12,7 @@ const AppBody = (props) => {
         <PageLayout />
         <style jsx>{`
           .pushwrap {
-            margin-left: 110px;
+            margin-left: 100px;
           }
         `}</style>
       </div>

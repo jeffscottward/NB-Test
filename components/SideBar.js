@@ -35,7 +35,7 @@ const Sidebar = () => {
           left: 0;
           height: 100%;
           background: black;
-          padding: 40px 20px 0 0;
+          padding: 40px 10px 0 0px;
           color: ${data.css.sideBarFontColor};
           z-index: 1;
         }
